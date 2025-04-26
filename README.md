@@ -11,6 +11,10 @@ Compatible con el diccionario rockyou.txt o cualquier otro diccionario.
 Funciona de manera eficiente en entornos Linux con acceso root.
 
 Uso:
+```
 ./bruteforce_local.sh -u <usuario> -w <ruta_al_diccionario>
+```
 
+```
 sudo ./bruteforce_local.sh -u bob -w /usr/share/wordlists/rockyou.txt
+```
