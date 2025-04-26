@@ -3,14 +3,20 @@
 # Función de ayuda
 usage() {
     echo "Uso: $0 -u <usuario> -w <diccionario>"
+    echo
+    echo "Opciones:"
+    echo "  -u <usuario>     Usuario al que se le intentará hacer fuerza bruta."
+    echo "  -w <diccionario> Ruta al archivo de diccionario (ej. rockyou.txt)."
+    echo "  -h               Mostrar esta ayuda."
     exit 1
 }
 
 # Procesar argumentos
-while getopts ":u:w:" opt; do
+while getopts ":u:w:h" opt; do
     case $opt in
         u) USER=$OPTARG ;;
         w) WORDLIST=$OPTARG ;;
+        h) usage ;;
         *) usage ;;
     esac
 done
